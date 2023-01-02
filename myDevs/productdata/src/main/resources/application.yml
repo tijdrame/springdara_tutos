@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: jpa-data
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mydb_jpa
+    username: root
+    password: passer
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+      cache:
+        use_second_level_cache: true
+        region:
+          factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+      javax:
+        persistence:
+          sharedCache:
+            mode: ALL
+  cache:
+    jhcache:
+      config: classpath:ehcache.xml
+
+server:
+  port: 8000

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: jpa-data
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/clinicals
+    username: root
+    password: passer
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8000
